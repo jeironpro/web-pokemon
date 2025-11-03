@@ -1,0 +1,174 @@
+body {
+    align-items: center;
+    background-color: #ff5a5a;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.contenedor-logo-titulo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor-logo-titulo img {
+    height: 200px;
+    width: 200px;
+}
+
+.contenedor-logo-titulo h1 {
+    color: #FFF;
+    font-size: 50px;
+}
+
+.pokemones {
+    animation: rotate 5s linear infinite;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.pokemon {
+    filter: drop-shadow(5px 10px rgba(0, 0, 0, 0.5));
+    height: 200px;
+    perspective: 1000px;
+    position: absolute;
+    width: 200px;
+}
+
+.pokemon:nth-child(1),
+.pokemon:nth-child(2),
+.pokemon:nth-child(3),
+.pokemon:nth-child(4),
+.pokemon:nth-child(5),
+.pokemon:nth-child(6),
+.pokemon:nth-child(7),
+.pokemon:nth-child(8),
+.pokemon:nth-child(9) {
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    background-size: 200px;
+}
+
+.pokemon:nth-child(1) {
+    background-image: url("../img/primera_generacion/Bulbasaur.png");
+    left: 10%;
+    top: 5%;
+}
+
+.pokemon:nth-child(2) {
+    background-image: url("../img/segunda_generacion/Chikorita.png");
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pokemon:nth-child(3) {
+    background-image: url("../img/tercera_generacion/Treecko.png");
+    left: 10%;
+    top: 80%;
+    transform: translateY(-50%);
+}
+
+.pokemon:nth-child(4) {
+    background-image: url("../img/cuarta_generacion/Turtwig.png");
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+}
+
+.pokemon:nth-child(5) {
+    background-image: url("../img/quinta_generacion/Victini.png");
+    top: 50%;
+    left: 55%;
+    transform: translateY(-50%);
+}
+
+.pokemon:nth-child(6) {
+    background-image: url("../img/sexta_generacion/Chespin.png");
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pokemon:nth-child(7) {
+    background-image: url("../img/septima_generacion/Rowlet.png");
+    right: 10%;
+    top: 5%;
+}
+
+.pokemon:nth-child(8) {
+    background-image: url("../img/octava_generacion/Grookey.png");
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pokemon:nth-child(9) {
+    background-image: url("../img/novena_generacion/Sprigatito.png");
+    right: 10%;
+    top: 80%;
+    transform: translateY(-50%);
+}
+
+@keyframes rotate {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .pokemon:nth-child(1),
+    .pokemon:nth-child(2),
+    .pokemon:nth-child(3),
+    .pokemon:nth-child(4),
+    .pokemon:nth-child(5),
+    .pokemon:nth-child(6),
+    .pokemon:nth-child(7),
+    .pokemon:nth-child(8),
+    .pokemon:nth-child(9) {
+        background-size: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pokemon:nth-child(1),
+    .pokemon:nth-child(2),
+    .pokemon:nth-child(3),
+    .pokemon:nth-child(4),
+    .pokemon:nth-child(5),
+    .pokemon:nth-child(6),
+    .pokemon:nth-child(7),
+    .pokemon:nth-child(8),
+    .pokemon:nth-child(9) {
+        background-size: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokemon:nth-child(1),
+    .pokemon:nth-child(2),
+    .pokemon:nth-child(3),
+    .pokemon:nth-child(4),
+    .pokemon:nth-child(5),
+    .pokemon:nth-child(6),
+    .pokemon:nth-child(7),
+    .pokemon:nth-child(8),
+    .pokemon:nth-child(9) {
+        background-size: 120px;
+    }
+}

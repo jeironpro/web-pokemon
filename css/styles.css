@@ -1,0 +1,282 @@
+* {
+    font-family: "Kanit", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #ff5a5a;
+    height: 100px;
+    left: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header nav {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+header nav .contenedor-logo a {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    text-decoration: none;
+}
+
+header nav .contenedor-logo img {
+    height: 40px;
+    width: 40px;
+}
+
+header nav .contenedor-logo h1 {
+    color: #000;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+header nav ul li {
+    font-size: 17px;
+}
+
+header nav ul li a {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main h2 {
+    font-size: 26px;
+    margin: 10px;
+    text-align: center;
+}
+
+.contenedor-cartas {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.carta {
+    background-position: center 47%;
+    background-repeat: no-repeat;
+    background-size: 210px;
+    border: 10px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 600px;
+    perspective: 1000px;
+    position: relative;
+    user-select: none;
+    width: 320px;
+}
+
+.cabecera {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.identificador {
+    color: #000;
+    position: absolute;
+    right: 3%;
+    top: 3%;
+}
+
+.nombre {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.tipo {
+    background-color: #333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    margin: 2px;
+    padding: 5px;
+}
+
+.cuerpo {
+    padding: 10px;
+    text-align: center;
+}
+
+.descripcion {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.estadisticas {
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.estadistica {
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    width: 100%;
+}
+
+.estadistica span {
+    padding: 0 5px;
+}
+
+.estadistica span:nth-child(1) {
+    border-right: 1px solid #000;
+    text-align: center;
+    width: 25%;
+}
+
+.estadistica span:nth-child(2) {
+    text-align: center;
+    width: 60%;
+}
+
+.estadistica span:nth-child(3) {
+    text-align: justify;
+    width: 5%;
+}
+
+.ps {
+    background-color: #BAFFB4;
+}
+
+.ataque {
+    background-color: #FFD09D;
+}
+
+.defensa {
+    background-color: #B3D5FF;
+}
+
+.at-esp {
+    background-color: #E1B3FF;
+}
+
+.def-esp {
+    background-color: #D1D1D1;
+}
+
+.velocidad {
+    background-color: #B3F0FF;
+}
+
+footer {
+    background-color: #000;
+    bottom: 0;
+    padding: 10px;
+    position: sticky;
+    text-align: center;
+}
+
+footer p {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        padding: 0 10px;
+    }
+
+    header nav ul {
+        gap: 20px;
+    }
+
+    header nav ul li {
+        font-size: 15px;
+    }
+
+    .nombre {
+        font-size: 20px;
+    }
+
+    .descripcion {
+        font-size: 13px;
+    }
+
+    .tipo {
+        font-size: 13px;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    header nav ul li {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .estadistica span {
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
